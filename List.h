@@ -1,7 +1,8 @@
 #pragma once
 #include <cstdint>
 
-template<typename T> class List {
+template<typename T> 
+class List {
 private:
 	uint32_t count;
 	T* items;
