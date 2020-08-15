@@ -1,9 +1,8 @@
 #include "List.h"
 #include "LinkedList.h"
-#include <string>
+#include "DoublyLinkedList.h"
 
-
-void test_list() 
+void test_List() 
 {
     cout << "=================================\n";
     cout << "           LIST TESTING\n";
@@ -47,7 +46,7 @@ void test_list()
     cout << "\n\n";
 }
 
-void test_linkedlist() 
+void test_LinkedList() 
 {
     cout << "=================================\n";
     cout << "       LINKED LIST TESTING\n";
@@ -94,5 +93,31 @@ void test_linkedlist()
     cout << "Remove tenth element:\n";
     linkedList.Remove(9);
     linkedList.PrintList();
+    cout << "\n";
+}
+
+void test_DoublyLinkedList()
+{
+    cout << "=================================\n";
+    cout << "  DOUBLY LINKED LIST TESTING\n";
+    cout << "=================================\n";
+
+    DoublyLinkedList<int> linkedList = DoublyLinkedList<int>();
+
+    linkedList.InsertHead(43);
+    linkedList.InsertHead(76);
+    linkedList.InsertTail(15);
+    linkedList.InsertTail(44);
+
+    cout << "List before insert:\n";
+    linkedList.PrintListBackward();
+    cout << "\n";
+
+    linkedList.Insert(4, 100);
+    linkedList.Insert(3, 48);
+    linkedList.Insert(0, 22);
+
+    cout << "List after insert:\n";
+    linkedList.PrintListBackward();
     cout << "\n";
 }

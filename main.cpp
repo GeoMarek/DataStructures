@@ -3,8 +3,9 @@
 
 int main()
 {
-    test_list();
-    test_linkedlist();
+    test_List();
+    test_LinkedList();
+    test_DoublyLinkedList();
 
     return 0;
 }
