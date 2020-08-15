@@ -1,6 +1,9 @@
 #include "List.h"
 #include "LinkedList.h"
 #include "DoublyLinkedList.h"
+#include "Stack.h"
+#include "Queue.h"
+#include "Deque.h"
 
 void test_List() 
 {
@@ -120,4 +123,70 @@ void test_DoublyLinkedList()
     cout << "List after insert:\n";
     linkedList.PrintListBackward();
     cout << "\n";
+}
+
+void test_Stack() 
+{
+    cout << "=================================\n";
+    cout << "         STACK TESTING\n";
+    cout << "=================================\n";
+
+    cout << "Push on stack\n";
+    Stack<int> stackInt = Stack<int>();
+    for (int i = 0; i < 10; ++i) 
+    {
+        cout << i << " - ";
+        stackInt.Push(i);
+    }
+    cout << "\nPop from Stack:\n";
+    while (!stackInt.IsEmpty())
+    {
+        cout << stackInt.Top() << " - ";
+        stackInt.Pop();
+    }
+}
+
+void test_Queue() {
+    cout << "=================================\n";
+    cout << "         QUEUE TESTING\n";
+    cout << "=================================\n";
+
+    cout << "Inserto into Queue\n";
+    Queue<int> queueInt = Queue<int>();
+    for (int i = 0; i < 10; ++i)
+    {
+        cout << i << " - ";
+        queueInt.Enqueue(i);
+    }
+    cout << "\nRemove from Queue:\n";
+    while (!queueInt.IsEmpty())
+    {
+        cout << queueInt.Front() << " - ";
+        queueInt.Dequeue();
+    }
+}
+
+void test_Deque() 
+{
+    cout << "=================================\n";
+    cout << "         DEQUE TESTING\n";
+    cout << "=================================\n";
+
+
+    Deque<int> deque = Deque<int>();
+    for (int i = 0; i < 10; ++i)
+    {
+        if (i % 2 == 1) {
+            deque.EnqueueFront(i);
+        }
+        else {
+            deque.EnqueueBack(i);
+        }
+    }
+    while (!deque.IsEmpty())
+    {
+        cout << deque.Back() << " - ";
+        deque.DequeueBack();
+    }
+
 }
