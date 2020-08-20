@@ -29,7 +29,7 @@ inline List<T>::~List()
 template<typename T>
 inline T List<T>::Get(uint32_t index)
 { 
-	if (index < 0 or index > count) return T();
+	if (index < 0 || index > count) return T();
 	return items[index];
 }
 
@@ -37,7 +37,7 @@ template<typename T>
 inline void List<T>::Insert(uint32_t index, T value)
 {
 	// bad index
-	if (index<0 or index > count) return;
+	if (index<0 || index > count) return;
 
 	// init new array
 	T* old_items = items;
@@ -76,7 +76,7 @@ template<typename T>
 inline void List<T>::Remove(uint32_t index)
 {
 	// bad index
-	if (index <0 or index > count) return;
+	if (index <0 || index > count) return;
 	
 	// init new array
 	T* old_items = items;

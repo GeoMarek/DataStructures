@@ -4,3 +4,6 @@
 //
 
 #include "pch.h"
+#include "QueueTest.h"
+#include "StackTest.h"
+#include "ListTest.h"

@@ -1,22 +1,9 @@
 #pragma once
 #include "pch.h"
-#include "../template/Stack.h"
 
 
-struct stackTestFixture : public testing::Test
-{
-    Stack<int> empty_stack = Stack<int>();
-    Stack<int> my_stack = Stack<int>();
-    void SetUp()
-    {
-        int values[] = { 1,2,3,4,5,6,7,8,9,10 };
-        for (auto& value : values)
-        {
-            my_stack.Push(value);
-        }
-    }
-    void TearDown() {}
-};
+
+
 
 TEST_F(stackTestFixture, TopReturnLastPushedValueAndPopRemoveLastPushedValue)
 {
