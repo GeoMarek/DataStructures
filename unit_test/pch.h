@@ -8,6 +8,7 @@
 #include "E:\Git\DataStructures\structures\Stack.h"
 #include "E:\Git\DataStructures\structures\Queue.h"
 #include "E:\Git\DataStructures\structures\List.h"
+#include "E:\Git\DataStructures\structures\LinkedList.h"
 
 struct stackTestFixture : public testing::Test
 {
@@ -54,5 +55,18 @@ struct  ListTestFixture : public testing::Test
     void TearDown(){}
 };
 
-
+struct  LinkedListFixture : public testing::Test
+{
+    LinkedList<int> empty_linked_list = LinkedList<int>();
+    LinkedList<int> full_linked_list = LinkedList<int>();
+    void SetUp() 
+    {
+        int values[] = { 1,2,3,4,5,6,7,8,9,10 };
+        for (auto& value : values)
+        {
+            full_linked_list.InsertTail(value);
+        }
+    }
+    void TearDown() {}
+};
 

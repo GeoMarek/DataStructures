@@ -7,3 +7,4 @@
 #include "QueueTest.h"
 #include "StackTest.h"
 #include "ListTest.h"
+#include "LinkedListTest.h"

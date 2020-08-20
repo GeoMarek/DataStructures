@@ -42,7 +42,7 @@ inline LinkedList<T>::~LinkedList()
 template<typename T>
 inline Node<T>* LinkedList<T>::Get(uint32_t index)
 {
-	if (index<0 or index>count) return nullptr;
+	if (index<0 || index>count) return nullptr;
 	Node<T>* node = Head;
 	
 	for (uint32_t i = 0; i < index; ++i) 
@@ -76,7 +76,7 @@ inline void LinkedList<T>::InsertTail(T value)
 template<typename T>
 inline void LinkedList<T>::Insert(uint32_t index, T value)
 {
-	if (index < 0 or index > count) return;
+	if (index < 0 || index > count) return;
 	if (index == 0) InsertHead(value);
 	else if (index == count) InsertTail(value);
 		
