@@ -62,7 +62,7 @@ template<typename T>
 inline void DoublyLinkedList<T>::Remove(uint32_t index)
 {
     if (count == 0) return;
-    if (index < 0 or index > count) return;
+    if (index < 0 || index > count) return;
    
     if (index == 0) {
         RemoveHead();
@@ -135,9 +135,9 @@ inline DoublyLinkedList<T>::~DoublyLinkedList()
 template<typename T>
 inline DoublyNode<T>* DoublyLinkedList<T>::Get(uint32_t index)
 {
-    if (index < 0 or index > count) return nullptr;  
+    if (index < 0 || index > count) return nullptr;  
     DoublyNode<T>* node = head;
-    for (int i = 0; i < index; ++i)
+    for (uint32_t i = 0; i < index; ++i)
     {
         node = node->next;
     }
@@ -176,7 +176,7 @@ inline void DoublyLinkedList<T>::InsertTail(T value)
 template<typename T>
 inline void DoublyLinkedList<T>::Insert(uint32_t index, T value)
 {
-    if (index<0 or index > count) return;
+    if (index<0 || index > count) return;
     else if (index == 0) 
     {
         InsertHead(value);

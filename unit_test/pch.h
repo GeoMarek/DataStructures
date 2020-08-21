@@ -9,6 +9,8 @@
 #include "E:\Git\DataStructures\structures\Queue.h"
 #include "E:\Git\DataStructures\structures\List.h"
 #include "E:\Git\DataStructures\structures\LinkedList.h"
+#include "E:\Git\DataStructures\structures\Deque.h"
+#include "E:\Git\DataStructures\structures\DoublyLinkedList.h"
 
 struct stackTestFixture : public testing::Test
 {
@@ -70,3 +72,32 @@ struct  LinkedListFixture : public testing::Test
     void TearDown() {}
 };
 
+struct DequeTestFixture : public testing::Test 
+{
+    Deque<int> full_deque = Deque<int>();
+    Deque<int> empty_deque = Deque<int>();
+    void SetUp() 
+    {
+        int values[] = { 1,2,3,4,5,6,7,8,9,10 };
+        for (auto& value : values)
+        {
+            full_deque.EnqueueBack(value);
+        }
+    }
+    void TearDown() {}
+};
+
+struct DoublyLinkedListFixture : public testing::Test 
+{
+    DoublyLinkedList<int> empty_list = DoublyLinkedList<int>();
+    DoublyLinkedList<int> full_list = DoublyLinkedList<int>();
+    void SetUp()
+    {
+        int values[] = { 1,2,3,4,5,6,7,8,9,10 };
+        for (auto& value : values)
+        {
+            full_list.InsertTail(value);
+        }
+    }
+    void TearDown() {}
+};

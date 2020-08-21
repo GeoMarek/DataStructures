@@ -41,10 +41,3 @@ TEST_F(QueueTestFixture, EnqueueAddElementAtEndOfQueue)
     ASSERT_EQ(expectedValue, inputedValue);
 }
 
-
-/*
-    bool IsEmpty();
-    T Front();
-    void Enqueue(T value);
-    void Dequeue();
-*/

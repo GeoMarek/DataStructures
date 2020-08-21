@@ -8,3 +8,5 @@
 #include "StackTest.h"
 #include "ListTest.h"
 #include "LinkedListTest.h"
+#include "DequeTest.h"
+#include "DoublyLinkedListTest.h"

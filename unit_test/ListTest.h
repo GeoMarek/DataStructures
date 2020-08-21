@@ -34,7 +34,7 @@ TEST_F(ListTestFixture, InsertChangeListAtIndexGivenAsParameter)
 
 TEST_F(ListTestFixture, GetReturnValueIfIndexIsCorrect)
 {
-    for (int i = 0; i < full_list.Count(); i++) 
+    for (uint32_t i = 0; i < full_list.Count(); i++) 
     {
         ASSERT_EQ(full_list.Get(i), i + 1);
     }

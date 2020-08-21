@@ -60,16 +60,6 @@ TEST_F(LinkedListFixture, InsertWithIndexEqualToCountIsTailInserting)
     ASSERT_EQ(last, insert);
 }
 
-//TEST_F(LinkedListFixture, SearchReturnValidIndexOfValue)
-//{
-//    uint32_t size = full_linked_list.Count();
-//    for (uint32_t i = 0; i < size; i++) 
-//    {
-//        auto result = full_linked_list.Search(i + 1);
-//        EXPECT_EQ(result, i);
-//    }
-//}
-
 TEST_F(LinkedListFixture, IfSearchDidNotFoundReturnDefaultInitializer)
 {
     auto result = full_linked_list.Search(100);
@@ -114,7 +104,7 @@ TEST_F(LinkedListFixture, RemoveWithValidIndexDeleteValue)
 {
     uint32_t size = full_linked_list.Count();
     int item = 1;
-    while (item <= size)
+    while (static_cast<uint32_t>(item) <= size)
     {
         uint32_t index = full_linked_list.Search(item);
         full_linked_list.Remove(index);
